@@ -7,7 +7,7 @@
       <% @posts.each do |post| %>
         <li class="list">
           <%= link_to "#" do %>
-            <%= image_tag "post-1.png" %>
+            <%= image_tag post.image %>
             <div class="post-info">
               <div class="heart-btn">
                 <%= image_tag "heart.png", class:"heart-icon" %>
