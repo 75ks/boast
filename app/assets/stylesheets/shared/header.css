@@ -1,0 +1,16 @@
+.top-page-header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgray;
+}
+
+.boast {
+  font-size: 7vh;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.lists-right {
+  display: flex;
+}
