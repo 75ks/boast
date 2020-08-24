@@ -1,9 +1,18 @@
 a {
   text-decoration: none;
+  color: black;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .post-contents {
-  width: 100%;
+  width: 500px;
+  margin: 0, auto;
+  text-align: center;
 }
 
 .post-lists {
@@ -14,6 +23,29 @@ a {
 }
 
 .post-lists>.list {
-  width: 50%;
+  width: 100%;
   list-style: none;
+  margin-top: 50px;
+}
+
+.post-text {
+  width: 100%;
+}
+
+.new-post-btn {
+  width: 150px;
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 5px;
+  border: black 2px solid;
+}
+
+.new-post-btn-text {
+  color: black;
+  font-size: 23px;
+  text-decoration: none;
 }
