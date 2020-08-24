@@ -1,0 +1,25 @@
+<%= render "shared/header"%>
+<div class="main">
+
+  <div class="post-contents">
+    <ul class="post-lists">
+      <% @posts.each do |post| %>
+        <li class="list">
+          <%= link_to "#" do %>
+            <%= image_tag "post-1.png" %>
+            <div class="post-info">
+              <div class="heart-btn">
+                <%= image_tag "heart.png", class:"heart-icon" %>
+                <span class="heart-count">0</span>
+              </div>
+              <p class="post-text">
+                <%= post.text %>
+              </p>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
