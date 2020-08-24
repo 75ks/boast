@@ -1,0 +1,12 @@
+<%= render "shared/header"%>
+
+<div class="contents">
+  <div class="container">
+    <%= form_with model: @post, local: true do |f| %>
+      <h3>新規投稿</h3>
+      <%= f.file_field :image, class:"post-image" %>
+      <%= f.text_area :text, class:"post-text", placeholder:"テキストを書く", rows:"10" %>
+      <%= f.submit "投稿する", class:"post-btn" %>
+    <% end %>
+  </div>
+</div>
