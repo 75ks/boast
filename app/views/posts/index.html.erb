@@ -5,7 +5,7 @@
     <ul class="post-lists">
       <% @posts.each do |post| %>
         <li class="list">
-          <%= link_to "#" do %>
+          <%= link_to post_path(post.id) do %>
             <%= image_tag post.image.variant(resize:'500x500') %>
           <% end %>
             <div class="post-info">
