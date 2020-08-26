@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :destroy, :edit, :update]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:text, :image)
+    params.require(:post).permit(:text, :image).merge(user_id: current_user.id)
   end
 
   def set_post
