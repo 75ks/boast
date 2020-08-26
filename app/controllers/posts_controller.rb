@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :destroy]
+  before_action :set_post, only: [:show, :destroy, :edit, :update]
 
   def index
     @posts = Post.all
@@ -27,6 +27,18 @@ class PostsController < ApplicationController
       redirect_to root_path
     else
       render :show
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.valid?
+      @post.update(post_params)
+      redirect_to post_path(@post.id)
+    else
+      render :edit
     end
   end
 
