@@ -2,7 +2,7 @@
 
 <div class="container row">
   <div class="post-show">
-    <span>@NickName</span>
+    <span>@<%= @post.user.nickname %></span>
     <%= link_to post_path(@post.id) do %>
       <%= image_tag @post.image.variant(resize:'650x650'), class:"post-image" %>
     <% end %>
