@@ -14,7 +14,7 @@
       <%= @post.text %>
     </p>
     <div class="btn-container">
-      <%= link_to "#" do %>
+      <%= link_to edit_post_path(@post.id) do %>
         <div class="edit-btn btn">
           <span class="edit-btn-text btn-text">編集</span>
         </div>
