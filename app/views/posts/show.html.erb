@@ -19,7 +19,7 @@
           <span class="edit-btn-text btn-text">編集</span>
         </div>
       <% end %>
-      <%= link_to "#" do %>
+      <%= link_to post_path(@post.id), method: :delete do %>
         <div class="delete-btn btn">
           <span class="delete-btn-text btn-text">削除</span>
         </div>
