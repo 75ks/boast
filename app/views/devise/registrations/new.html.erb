@@ -7,8 +7,16 @@
       <%= devise_error_messages! %>
 
       <div class="field">
+        <%= f.label :nickname, "ニックネーム" %><br>
+        <%= f.text_field :nickname, class:"user-field", placeholder:"ニックネームを入力してください", autofocus: true, maxlength: "10" %>
+      </div>
+      <div class="field">
+        <%= f.label :gender_id, "性別" %><br>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+      <div class="field">
         <%= f.label :email, "メールアドレス" %><br>
-        <%= f.email_field :email, class:"user-field", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+        <%= f.email_field :email, class:"user-field", placeholder:"PC・携帯どちらでも可" %>
       </div>
       <div class="field">
         <%= f.label :password, "パスワード" %><br>
