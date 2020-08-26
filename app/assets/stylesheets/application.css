@@ -16,3 +16,15 @@
  * {
   box-sizing: border-box;
  }
+
+ .notice {
+   background-color: #51ff51;
+   color: white;
+   text-align: center;
+ }
+
+ .alert {
+   background-color: #ff5151;
+   color: white;
+   text-align: center;
+ }

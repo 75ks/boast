@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :destroy]
+  before_action :set_post, only: [:show, :destroy, :edit, :update]
 
   def index
     @posts = Post.all
@@ -13,8 +13,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.valid?
       @post.save
+      flash[:notice] = "投稿が完了しました"
       redirect_to root_path
     else
+      flash.now[:alert] = "投稿に失敗しました"
       render :new
     end
   end
@@ -24,9 +26,24 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.destroy
+      flash[:notice] = "削除が完了しました"
       redirect_to root_path
     else
+      flash.now[:alert] = "削除に失敗しました"
       render :show
+    end
+  end
+
+  def edit
+  end
+
+  def update
+      if @post.update(post_params)
+      flash[:notice] = "編集が完了しました"
+      redirect_to post_path(@post.id)
+    else
+      flash.now[:alert] = "編集に失敗しました"
+      render :edit
     end
   end
 
