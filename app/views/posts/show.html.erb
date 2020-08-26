@@ -1,0 +1,29 @@
+<%= render "shared/header"%>
+
+<div class="container row">
+  <div class="post-show">
+    <span>@NickName</span>
+    <%= link_to post_path(@post.id) do %>
+      <%= image_tag @post.image.variant(resize:'650x650'), class:"post-image" %>
+    <% end %>
+    <div class="heart-btn">
+      <%= image_tag "heart.png", class:"heart-icon" %>
+      <span class="heart-count">0</span>
+    </div>
+    <p class="post-text">
+      <%= @post.text %>
+    </p>
+    <div class="btn-container">
+      <%= link_to "#" do %>
+        <div class="edit-btn btn">
+          <span class="edit-btn-text btn-text">編集</span>
+        </div>
+      <% end %>
+      <%= link_to "#" do %>
+        <div class="delete-btn btn">
+          <span class="delete-btn-text btn-text">削除</span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

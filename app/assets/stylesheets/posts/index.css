@@ -37,7 +37,6 @@ a {
   display: inline-block;
   border-bottom: black 2px solid;
   margin-top: 12px;
-
 }
 
 .post-image {
@@ -53,17 +52,21 @@ a {
   text-align: center;
 }
 
-.new-post-btn {
+.btn {
   width: 150px;
-  background-color: lightgray;
   text-align: center;
   border-radius: 15px;
-  bottom: 32px;
-  right: 32px;  
-  position: fixed;
   padding: 10px;
   border: black 1px solid;
   box-shadow: 2px 2px 2px;
+
+}
+
+.new-post-btn {
+  background-color: lightgray;
+  bottom: 32px;
+  right: 32px;  
+  position: fixed;
 }
 
 .new-post-btn:hover {
@@ -75,8 +78,11 @@ a {
   box-shadow: none;
 }
 
-.new-post-btn-text {
-  color: black;
+.btn-test {
   font-size: 18px;
   text-decoration: none;
+}
+
+.new-post-btn-text {
+  color: black;
 }

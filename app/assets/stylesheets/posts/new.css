@@ -25,12 +25,7 @@
 }
 
 .post-btn {
-  width: 150px;
   background-color: lightgray;
-  border-radius: 15px;
-  padding: 10px;
-  border: black 1px solid;
-  box-shadow: 2px 2px 2px;
   color: black;
   font-size: 18px;
 }
