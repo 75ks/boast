@@ -5,26 +5,24 @@
     <ul class="post-lists">
       <% @posts.each do |post| %>
         <li class="list">
-          <%= link_to "#" do %>
-            <%= image_tag post.image.variant(resize:'500x500') %>
+          <span>@NickName</span>
+          <%= link_to post_path(post.id) do %>
+            <%= image_tag post.image.variant(resize:'500x500'), class:"post-image" %>
           <% end %>
-            <div class="post-info">
-              <div class="heart-btn">
-                <%= image_tag "heart.png", class:"heart-icon" %>
-                <span class="heart-count">0</span>
-              </div>
-              <p class="post-text">
-                <%= post.text %>
-              </p>
-            </div>
+          <div class="heart-btn">
+            <%= image_tag "heart.png", class:"heart-icon" %>
+            <span class="heart-count">0</span>
+          </div>
+          <p class="post-text">
+            <%= post.text %>
+          </p>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
-<div class="new-post-btn">
-  <%= link_to new_post_path do %>
-    <span class="new-post-btn-text">投稿</span>
-    <%= image_tag "new_post_icon.png", size: '80x60' %>
-  <% end %>
-</div>
+<%= link_to new_post_path do %>
+  <div class="new-post-btn btn">
+    <span class="new-post-btn-text btn-text">投稿</span>
+  </div>
+<% end %>

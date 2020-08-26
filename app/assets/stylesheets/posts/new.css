@@ -6,21 +6,35 @@
 }
 
 .new-content {
-  font-size: 4vh;
+  font-size: 30px;
   text-align: center;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.post-text {
+.post-new-text {
   height: 200px;
   width: 600px;
   padding: 16px;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-center {
+  text-align: center;
 }
 
 .post-btn {
-  width: 100%;
-  text-align: center;
+  background-color: lightgray;
+  color: black;
+  font-size: 18px;
+}
+
+.post-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.post-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
