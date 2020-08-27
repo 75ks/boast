@@ -204,3 +204,11 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        gender_id: 性別
+      post:
+        text: テキスト
+        image: 画像
