@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :destroy, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @posts = Post.all.order("created_at DESC")
@@ -55,5 +56,11 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def correct_user
+    unless user_signed_in? && current_user.id == @post.user.id
+      redirect_to root_path
+    end
   end
 end
