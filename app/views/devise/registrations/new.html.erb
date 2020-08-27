@@ -1,0 +1,35 @@
+<%= render "shared/header"%>
+
+<div class="contents">
+  <div class="container row">
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+      <h3 class="new-content">新規登録</h3>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :nickname, "ニックネーム" %><br>
+        <%= f.text_field :nickname, class:"user-field", placeholder:"ニックネームを入力してください", autofocus: true, maxlength: "10" %>
+      </div>
+      <div class="field">
+        <%= f.label :gender_id, "性別" %><br>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "メールアドレス" %><br>
+        <%= f.email_field :email, class:"user-field", placeholder:"PC・携帯どちらでも可" %>
+      </div>
+      <div class="field">
+        <%= f.label :password, "パスワード" %><br>
+        <%= f.password_field :password, class:"user-field", placeholder:"6文字以上の半角英数字" %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, "パスワード(確認)" %><br>
+        <%= f.password_field :password_confirmation, class:"user-field", placeholder:"同じパスワードを入力して下さい" %>
+      </div>
+      <div class="btn-center">
+        <%= f.submit "登録する", class:"user-btn btn" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

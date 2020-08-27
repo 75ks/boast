@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: lightgray;
   border-bottom: black 2px solid;
 }
@@ -14,4 +15,15 @@
 
 .lists-right {
   display: flex;
+  margin-right: 30px;
+}
+
+.list-left {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.list-right {
+  font-size: 18px;
+  margin-left: 30px;
 }
