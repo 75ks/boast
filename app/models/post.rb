@@ -5,5 +5,6 @@ class Post < ApplicationRecord
   with_options presence: true do
     validates :text
     validates :image
+    validates :user
   end
 end
