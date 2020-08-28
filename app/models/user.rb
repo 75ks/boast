@@ -7,6 +7,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :gender
   has_many               :posts
+  has_many               :comments
 
   with_options presence: true do
     validates :nickname
