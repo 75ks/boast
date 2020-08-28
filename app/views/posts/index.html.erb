@@ -11,7 +11,7 @@
             <% end %>
           </span>
           <%= link_to post_path(post.id) do %>
-            <%= image_tag post.image.variant(resize:'500x500'), class:"post-image" %>
+            <%= image_tag post.image, class:"post-image" %>
           <% end %>
           <div class="heart-btn">
             <%= image_tag "heart.png", class:"heart-icon" %>

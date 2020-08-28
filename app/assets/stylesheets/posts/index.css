@@ -41,6 +41,11 @@ a {
 
 .post-image {
   margin-top: 12px;
+  height: 33vh;
+  width: 33vw;
+  min-height: 500px;
+  background-color: #f5f5f5;
+  object-fit: contain;
 }
 
 .heart-btn {
