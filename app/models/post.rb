@@ -7,4 +7,6 @@ class Post < ApplicationRecord
     validates :image
     validates :user
   end
+
+  validates :text, length: { maximum: 150, message: "は150文字以下にしてください" }
 end
