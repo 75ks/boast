@@ -15,15 +15,25 @@
 
 .lists-right {
   display: flex;
-  margin-right: 30px;
 }
 
-.list-left {
+.user-nickname {
   font-size: 18px;
   font-weight: bold;
+  margin-right: 25px;
 }
 
-.list-right {
+.logout {
   font-size: 18px;
-  margin-left: 30px;
+  margin-left: 25px;
+}
+
+.login {
+  font-size: 18px;
+  margin-right: 25px;
+}
+
+.sign-up {
+  font-size: 18px;
+  margin-left: 25px;
 }
