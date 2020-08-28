@@ -212,3 +212,5 @@ ja:
       post:
         text: テキスト
         image: 画像
+      comment:
+        text: テキスト
