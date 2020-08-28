@@ -5,7 +5,11 @@
     <ul class="post-lists">
       <% @posts.each do |post| %>
         <li class="list">
-          <span>@<%= post.user.nickname %></span>
+          <span>
+            <%= link_to user_path(post.user.id) do %>
+              @<%= post.user.nickname %>
+            <% end %>
+          </span>
           <%= link_to post_path(post.id) do %>
             <%= image_tag post.image.variant(resize:'500x500'), class:"post-image" %>
           <% end %>
