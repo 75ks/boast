@@ -31,5 +31,26 @@
         <% end %>
       </div>
     <% end %>
+
+    <div class="row">
+      <% if @comments.present? %>
+        <h3 class="comment-content">コメント一覧</h3>
+        <div class="comments-container">
+          <% @comments.each do |comment| %>
+            <div class="comment-container">
+              <span>@<%= link_to comment.user.nickname, user_path(comment.user.id) %>:</span>
+              <%= comment.text %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <%= form_with(model: [@post, @comment], url: post_comments_path(@post.id), local: true) do |f| %>
+        <%= render "shared/error_messages", model: f.object %>
+        <%= f.text_area :text, class:"comment-new-text", placeholder:"コメントを書く" %>
+        <div class="btn-center"><%= f.submit "コメントする", class:"post-btn btn" %></div>
+      <% end %>
+    </div>
   </div>
 </div>

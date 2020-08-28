@@ -7,7 +7,8 @@ class CommentsController < ApplicationController
       redirect_to post_path(@comment.post.id)
     else
       flash.now[:alert] = "コメントに失敗しました"
-      render post_path(@comment.post.id)
+      @post = Post.find(params[:post_id])
+      render template: "posts/show"
     end
   end
 
