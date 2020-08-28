@@ -3,10 +3,15 @@
 <div class="contents">
   <div class="container row">
     <%= form_with model: @post, local: true do |f| %>
+
       <h3 class="new-content">投稿情報を入力してください</h3>
+
+      <%= render "shared/error_messages", model: f.object %>
+
       <div><%= f.file_field :image, class:"post-new-image" %></div>
       <div><%= f.text_area :text, class:"post-new-text", placeholder:"テキストを書く", rows:"10" %></div>
       <div class="btn-center"><%= f.submit "投稿する", class:"post-btn btn" %></div>
+      
     <% end %>
   </div>
 </div>
