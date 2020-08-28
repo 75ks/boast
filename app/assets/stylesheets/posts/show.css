@@ -26,6 +26,11 @@
   object-fit: contain;
 }
 
+.post-time {
+  color: darkgray;
+  font-size: 15px;
+}
+
 .edit-btn {
   background-color: #c1ffc1;
   margin-top: 40px;
@@ -56,6 +61,10 @@
   box-shadow: none;
 }
 
+.delete-btn-text {
+  color: black;
+}
+
 .edit-btn-text {
   color: black;
 }
@@ -78,9 +87,11 @@
   margin-bottom: 10px;
 }
 
-.delete-btn-text {
-  color: black;
+.comment-time {
+  color: darkgray;
+  font-size: 4px;
 }
+
 
 .comment-new-text {
   height: 100px;
