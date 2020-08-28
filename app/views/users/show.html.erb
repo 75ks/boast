@@ -1,15 +1,15 @@
 <%= render "shared/header"%>
 
+<div class="user-info">
+  <h2 class="info-name">@<%= @nickname %></h2>
+  <h2 class="info-gender"><%=  @gender %></h2>
+</div>
+
 <div class="main">
   <div class="post-contents">
     <ul class="post-lists">
       <% @posts.each do |post| %>
         <li class="list">
-          <span>
-            <%= link_to user_path(post.user.id) do %>
-              @<%= post.user.nickname %>
-            <% end %>
-          </span>
           <%= link_to post_path(post.id) do %>
             <%= image_tag post.image, class:"post-image" %>
           <% end %>
