@@ -24,6 +24,11 @@ RSpec.describe Post, type: :model do
         @post.valid?
         expect(@post.errors.full_messages).to include("画像を入力してください")
       end
+      it 'textの文字数が150文字以下ではない場合登録できない' do
+        @post.text = "テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。テストです。"
+        @post.valid?
+        expect(@post.errors.full_messages).to include("テキストは150文字以下にしてください")
+      end
     end
   end
 end
