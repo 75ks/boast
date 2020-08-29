@@ -15,6 +15,7 @@
 
 .btn-container {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .post-image-box {
@@ -26,8 +27,14 @@
   object-fit: contain;
 }
 
+.post-time {
+  color: darkgray;
+  font-size: 15px;
+}
+
 .edit-btn {
   background-color: #c1ffc1;
+  margin-top: 40px;
   margin-right: 20px;
 }
 
@@ -42,6 +49,7 @@
 
 .delete-btn {
   background-color: #ffc1c1;
+  margin-top: 40px;
   margin-left: 20px;
 }
 
@@ -54,10 +62,43 @@
   box-shadow: none;
 }
 
+.delete-btn-text {
+  color: black;
+}
+
 .edit-btn-text {
   color: black;
 }
 
-.delete-btn-text {
-  color: black;
+.comment-content {
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.comments-container {
+  padding: 30px;
+  border: lightgray 1px solid;
+}
+
+.comment-container {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.comment-time {
+  color: darkgray;
+  font-size: 4px;
+}
+
+
+.comment-new-text {
+  height: 100px;
+  width: 560px;
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  resize: none;
 }

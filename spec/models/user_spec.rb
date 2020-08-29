@@ -38,6 +38,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
+      it 'nicknameの文字数が8文字以下ではない場合登録できない' do
+        @user.nickname = "testtesttest"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("ニックネームは8文字以下にしてください")
+      end
       it 'gender_idが1以外の場合登録できる' do
         @user.gender_id = 1
         @user.valid?
