@@ -10,6 +10,7 @@
 
       <p class="image-content">クリックして画像を選択</p>
       <%= f.file_field :image, class:"post-new-image" %><br>
+      <div id="image-list"></div>
       <%= f.text_area :text, class:"post-new-text", placeholder:"テキストを書く", rows:"10" %>
       <div class="btn-center"><%= f.submit "投稿する", class:"post-btn btn" %></div>
 
