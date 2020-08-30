@@ -8,7 +8,9 @@
       <% end %>
     </span>
     <%= link_to post_path(@post.id) do %>
-      <%= image_tag @post.image, class:"post-image-box" %>
+      <% @post.images.each do |image| %>
+        <%= image_tag image, class:"post-image-box" %>
+      <% end %>
     <% end %>
     <div class="post-time">
       <%= l @post.created_at, format: :short %>

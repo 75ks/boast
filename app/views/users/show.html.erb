@@ -11,7 +11,9 @@
       <% @posts.each do |post| %>
         <li class="list">
           <%= link_to post_path(post.id) do %>
-            <%= image_tag post.image, class:"post-image" %>
+            <% post.images.each do |image| %>
+              <%= image_tag image, class:"post-image" %>
+            <% end %>
           <% end %>
           <div class="heart-btn">
             <%= image_tag "heart.png", class:"heart-icon" %>
