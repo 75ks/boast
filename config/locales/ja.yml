@@ -211,6 +211,6 @@ ja:
         gender_id: 性別
       post:
         text: テキスト
-        image: 画像
+        images: 画像
       comment:
         text: テキスト

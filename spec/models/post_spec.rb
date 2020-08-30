@@ -3,12 +3,15 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before do
     @post = FactoryBot.build(:post)
-    @post.image = fixture_file_upload("app/assets/images/post-1.png")
+    @post.images.attach(
+      fixture_file_upload("app/assets/images/post-1.png"),
+      fixture_file_upload("app/assets/images/post-2.png")
+    )
   end
 
   describe '投稿' do
     context '投稿がうまくいくとき' do
-      it 'textとimageが存在すれば登録できる' do
+      it 'textとimagesが存在すれば登録できる' do
         expect(@post).to be_valid
       end
     end
@@ -19,8 +22,8 @@ RSpec.describe Post, type: :model do
         @post.valid?
         expect(@post.errors.full_messages).to include("テキストを入力してください")
       end
-      it 'imageが空では登録できない' do
-        @post.image = nil
+      it 'imagesが空では登録できない' do
+        @post.images = nil
         @post.valid?
         expect(@post.errors.full_messages).to include("画像を入力してください")
       end
