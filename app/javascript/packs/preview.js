@@ -18,8 +18,10 @@ if (document.URL.match(/new/) || document.URL.match(/edit/)) {
       inputHTML.setAttribute("type", "file");
       
       
+      if (inputHTML.getAttribute("id") == "post_image_0") {
+        imageElement.appendChild(inputHTML);
+      }
       imageElement.appendChild(blobImage);
-      imageElement.appendChild(inputHTML);
       imageList.appendChild(imageElement);
       
       inputHTML.addEventListener("change", function(e){
