@@ -5,18 +5,18 @@ a {
 
 .main {
   width: 100%;
+}
+
+.post-contents {
+  width: 100%;
+  margin: 0, auto;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.post-contents {
-  width: 500px;
-  margin: 0, auto;
-  text-align: center;
-}
-
 .post-lists {
-  width: 100%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
