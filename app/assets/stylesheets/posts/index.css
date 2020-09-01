@@ -7,6 +7,30 @@ a {
   width: 100%;
 }
 
+.gender-container {
+  width: 100%;
+  height: 50px;
+  background-color: lightgray;
+  padding-left: 200px;
+  padding-right: 200px;
+  
+}
+
+.gender-lists {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gender {
+  font-weight: bold;
+}
+
+.gender:hover {
+  border-bottom: black 2px solid;
+}
+
 .post-contents {
   width: 100%;
   margin: 0, auto;

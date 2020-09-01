@@ -10,4 +10,12 @@ class Post < ApplicationRecord
   end
 
   validates :text, length: { maximum: 150, message: "は150文字以下にしてください" }
+
+  def self.search(search)
+    if search.to_i == 2
+      Post.joins(:user).where("users.gender_id = 2")
+    elsif search.to_i == 3
+      Post.joins(:user).where("users.gender_id = 3")
+    end
+  end
 end
