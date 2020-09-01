@@ -49,6 +49,9 @@
 
 .delete-btn {
   background-color: #ffc1c1;
+}
+
+.delete-post {
   margin-top: 40px;
   margin-left: 20px;
 }
