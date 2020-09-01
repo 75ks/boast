@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.search(params[:gender_id])
+  end
+
   private
 
   def post_params
