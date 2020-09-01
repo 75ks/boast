@@ -1,0 +1,47 @@
+<%= render "shared/header"%>
+
+<div class="main">
+  <div class="gender-container">
+    <ul class="gender-lists">
+     <li>
+      <%= link_to "ALL", root_path, class:"gender" %>
+     </li>
+     <li>
+      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"gender" %>
+     </li>
+     <li>
+      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"gender" %>
+     </li>
+    </ul>
+  </div>
+  <div class="post-contents">
+    <ul class="post-lists">
+      <% @posts.each do |post| %>
+        <li class="list">
+          <span>
+            <%= link_to user_path(post.user.id) do %>
+              @<%= post.user.nickname %>
+            <% end %>
+          </span>
+          <%= link_to post_path(post.id) do %>
+            <% post.images.each do |image| %>
+              <%= image_tag image, class:"post-image" %>
+            <% end %>
+          <% end %>
+          <div class="heart-btn">
+            <%= image_tag "heart.png", class:"heart-icon" %>
+            <span class="heart-count">0</span>
+          </div>
+          <p class="post-text">
+            <%= post.text %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%= link_to new_post_path do %>
+  <div class="new-post-btn btn">
+    <span class="new-post-btn-text btn-text">投稿</span>
+  </div>
+<% end %> 
