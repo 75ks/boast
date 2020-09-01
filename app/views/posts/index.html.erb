@@ -4,13 +4,13 @@
   <div class="gender-container">
     <ul class="gender-lists">
      <li>
-      <%= link_to "ALL", "#", class:"gender" %>
+      <%= link_to "ALL", root_path, class:"gender" %>
      </li>
      <li>
-      <%= link_to "MEN", "#", class:"gender" %>
+      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"gender" %>
      </li>
      <li>
-      <%= link_to "WOMEN", "#", class:"gender" %>
+      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"gender" %>
      </li>
     </ul>
   </div>
