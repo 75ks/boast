@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update
+    if @user.update(user_params)
       flash[:notice] = "編集が完了しました"
       redirect_to user_path(@user.id)
     else
@@ -29,6 +29,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def user_params
+    params.fetch(:user, {}).permit(:nickname, :gender_id, :email)
+  end
 
   def set_user
     @user = User.find(params[:id])
