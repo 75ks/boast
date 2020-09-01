@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   end
 
   def update
-      if @post.update(post_params)
+    if @post.update(post_params)
       flash[:notice] = "編集が完了しました"
       redirect_to post_path(@post.id)
     else
