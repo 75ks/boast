@@ -5,4 +5,16 @@ class UsersController < ApplicationController
     @gender = user.gender.name
     @posts = user.posts
   end
+
+  def destroy
+    
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
 end
