@@ -70,5 +70,4 @@ gem "aws-sdk-s3", require: false
 gem 'devise'
 gem 'active_hash'
 gem 'kaminari'
-gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
+gem 'bootstrap4-kaminari-views'
