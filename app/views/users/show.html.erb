@@ -1,14 +1,26 @@
 <%= render "shared/header"%>
 
-<div class="user-info">
-  <h2 class="info-name">@<%= @nickname %></h2>
-  <h2 class="info-gender"><%=  @gender %></h2>
+<div class="user-container">
+  <div class="user-info">
+    <h2 class="info-name">@<%= @user.nickname %></h2>
+    <h2 class="info-gender"><%=  @user.gender.name %></h2>
+  </div>
+  <% if user_signed_in? && current_user.id == @user.id %>
+    <div class="btn-container">
+      <%= link_to edit_user_registration_path do %>
+        <div class="edit-btn btn user-edit-btn">
+          <span class="edit-btn-text btn-text">ユーザー編集</span>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
 </div>
 
 <div class="main">
   <div class="post-contents">
     <ul class="post-lists">
-      <% @posts.each do |post| %>
+      <% @user.posts.each do |post| %>
         <li class="list">
           <%= link_to post_path(post.id) do %>
             <% post.images.each do |image| %>

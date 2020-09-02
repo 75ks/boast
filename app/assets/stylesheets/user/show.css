@@ -1,5 +1,11 @@
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .user-info {
-  width: 100%;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -15,4 +21,9 @@
 
 .info-gender {
   font-size: 18px;
+}
+
+.user-edit-btn {
+  margin-left: 10px;
+  margin-right: 10px;
 }

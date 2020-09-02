@@ -30,3 +30,26 @@
   transform: translateY(4px);
   box-shadow: none;
 }
+
+.delete-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.delete-btn-container > p {
+  font-weight: bold;
+  font-size: 23px;
+  color: red;
+}
+
+.delete-user {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.not-change-password {
+  font-size: 12px;
+}

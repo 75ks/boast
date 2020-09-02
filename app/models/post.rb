@@ -13,9 +13,9 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search.to_i == 2
-      Post.joins(:user).where("users.gender_id = 2")
+      Post.joins(:user).where("users.gender_id = 2").order("created_at DESC")
     elsif search.to_i == 3
-      Post.joins(:user).where("users.gender_id = 3")
+      Post.joins(:user).where("users.gender_id = 3").order("created_at DESC")
     end
   end
 end
