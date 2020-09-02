@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :destroy, :edit, :update]
-  before_action :correct_user, only: [:edit, :update]
 
   def show
   end
@@ -15,32 +14,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @user.update(user_params)
-      flash[:notice] = "編集が完了しました"
-      redirect_to user_path(@user.id)
-    else
-      flash.now[:alert] = "編集に失敗しました"
-      render :edit
-    end
-  end
-
   private
-
-  def user_params
-    params.fetch(:user, {}).permit(:nickname, :gender_id, :email)
-  end
 
   def set_user
     @user = User.find(params[:id])
-  end
-
-  def correct_user
-    unless user_signed_in? && current_user.id == @user.id
-      redirect_to root_path
-    end
   end
 end
