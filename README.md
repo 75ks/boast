@@ -40,3 +40,15 @@
 
 - belongs_to :user
 - belongs_to :post
+
+## favorites テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| post   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :post
