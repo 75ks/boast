@@ -11,8 +11,9 @@
 
 ### Association
 
-- has_many :posts
-- has_many :comments
+- has_many               :posts
+- has_many               :comments
+- has_many               :favorites
 - belongs_to_active_hash :gender
 
 ## posts テーブル
@@ -25,6 +26,7 @@
 ### Association
 
 - has_many          :comments
+- has_many          :favorites
 - belongs_to        :user
 - has_many_attached :images
 
