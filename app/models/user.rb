@@ -8,6 +8,7 @@ class User < ApplicationRecord
   belongs_to_active_hash :gender
   has_many               :posts, dependent: :destroy
   has_many               :comments, dependent: :destroy
+  has_many               :favorites, dependent: :destroy
 
   with_options presence: true do
     validates :nickname
