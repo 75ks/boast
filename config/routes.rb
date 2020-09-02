@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "posts#index"
   resources :posts, only: [:new, :create, :show, :destroy, :edit, :update] do
     resources :comments, only: :create
+    resources :favorites, only: [:show, :create, :destroy]
     collection do
       get "search"
     end
