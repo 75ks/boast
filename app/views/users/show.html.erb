@@ -20,7 +20,7 @@
 <div class="main">
   <div class="post-contents">
     <ul class="post-lists">
-      <% @user.posts.each do |post| %>
+      <% @user_posts.each do |post| %>
         <li class="list">
           <%= link_to post_path(post.id) do %>
             <% post.images.each do |image| %>
@@ -35,6 +35,7 @@
           </p>
         </li>
       <% end %>
+      <%= paginate @user_posts %>
     </ul>
   </div>
 </div>
