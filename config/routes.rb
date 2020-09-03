@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   root "posts#index"
   resources :posts, only: [:new, :create, :show, :destroy, :edit, :update] do
     resources :comments, only: :create
-    resources :favorites, only: [:show, :create, :destroy]
+    resources :favorites, only: [:index, :create, :destroy]
     collection do
-      get "search"
+      get :search
     end
   end
-  resources :users, only: [:show, :destroy]
+  resources :users, only: [:show, :destroy] do
+    collection do
+      get :likes
+    end
+  end
 end
