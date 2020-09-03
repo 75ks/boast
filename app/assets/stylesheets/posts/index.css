@@ -76,6 +76,16 @@ a {
   margin-top: 12px;
 }
 
+.like-btn {
+  color: #808080;
+  font-size: 20px;
+}
+
+.unlike-btn {
+  color: #e54747;
+  font-size: 20px;
+}
+
 .post-text {
   margin: 12px;
   text-align: center;

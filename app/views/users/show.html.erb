@@ -30,11 +30,11 @@
           <div class="heart-btn">
             <% unless Favorite.find_by(user_id: current_user.id, post_id: post.id) %>
               <%= link_to post_favorites_path(post.id), method: :post do %>
-                <%= image_tag "heart.png", class:"heart-icon" %>
+                <i class="far fa-heart like-btn"></i>
               <% end %>
             <% else %>
               <%= link_to post_favorite_path(post.id, current_user.id), method: :delete do %>
-                <%= image_tag "heart.png", class:"heart-icon" %>
+                <i class="fas fa-heart unlike-btn"></i>
               <% end %>
             <% end %>
             <span class="heart-count">
