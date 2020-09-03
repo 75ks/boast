@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   has_many_attached :images
   has_many          :comments, dependent: :destroy
   has_many          :favorites, dependent: :destroy
-  has_many          :users, through: :favorites
+  belongs_to        :user
 
   with_options presence: true do
     validates :text
