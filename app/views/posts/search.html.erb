@@ -1,16 +1,16 @@
 <%= render "shared/header"%>
 
 <div class="main">
-  <div class="gender-container">
-    <ul class="gender-lists">
+  <div class="genre-container">
+    <ul class="genre-lists">
      <li>
-      <%= link_to "ALL", root_path, class:"gender" %>
+      <%= link_to "ALL", root_path, class:"genre" %>
      </li>
      <li>
-      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"gender" %>
+      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"genre" %>
      </li>
      <li>
-      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"gender" %>
+      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"genre" %>
      </li>
     </ul>
   </div>
@@ -28,15 +28,15 @@
               <%= image_tag image, class:"post-image" %>
             <% end %>
           <% end %>
-          <div class="heart-btn">
-            <%= image_tag "heart.png", class:"heart-icon" %>
-            <span class="heart-count">0</span>
+          <div class="heart-btn" id="favorites_buttons_<%= post.id %>">
+            <%= render partial: "shared/like", locals: {post: post} %>
           </div>
           <p class="post-text">
             <%= post.text %>
           </p>
         </li>
       <% end %>
+      <%= paginate @posts %>
     </ul>
   </div>
 </div>

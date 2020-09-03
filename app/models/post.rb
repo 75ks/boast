@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
   has_many_attached :images
-  has_many         :comments, dependent: :destroy
-  belongs_to       :user
+  has_many          :comments, dependent: :destroy
+  has_many          :favorites, dependent: :destroy
+  belongs_to        :user
 
   with_options presence: true do
     validates :text

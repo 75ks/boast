@@ -4,25 +4,34 @@
   <div class="genre-container">
     <ul class="genre-lists">
      <li>
-      <%= link_to "ALL", root_path, class:"genre" %>
+      <%= link_to "自分の投稿", user_path(current_user.id), class:"genre" %>
      </li>
      <li>
-      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"genre" %>
-     </li>
-     <li>
-      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"genre" %>
+      <%= link_to "いいねした投稿", likes_users_path, class:"genre" %>
      </li>
     </ul>
   </div>
+
+  <div class="user-container">
+    <div class="user-info">
+      <h2 class="info-name">@<%= current_user.nickname %></h2>
+      <h2 class="info-gender"><%= current_user.gender.name %></h2>
+    </div>
+    <% if user_signed_in? && current_user.id %>
+      <div class="btn-container">
+        <%= link_to edit_user_registration_path do %>
+          <div class="edit-btn btn user-edit-btn">
+            <span class="edit-btn-text btn-text">ユーザー編集</span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="post-contents">
     <ul class="post-lists">
-      <% @posts.each do |post| %>
+      <% @user_posts.each do |post| %>
         <li class="list">
-          <span>
-            <%= link_to user_path(post.user.id) do %>
-              @<%= post.user.nickname %>
-            <% end %>
-          </span>
           <%= link_to post_path(post.id) do %>
             <% post.images.each do |image| %>
               <%= image_tag image, class:"post-image" %>
@@ -34,17 +43,9 @@
           <p class="post-text">
             <%= post.text %>
           </p>
-          <ul class="favorite_lists">
-            <p>＜いいねしたユーザー＞</p>
-            <% post.favorites.each do |favorite|%>
-              <li class="favorite_list">
-                <%= favorite.user.nickname %>
-              </li>
-            <% end %>
-          </ul>
         </li>
       <% end %>
-      <%= paginate @posts %>
+      <%= paginate @user_posts %>
     </ul>
   </div>
 </div>
@@ -52,4 +53,4 @@
   <div class="new-post-btn btn">
     <span class="new-post-btn-text btn-text">投稿</span>
   </div>
-<% end %> 
+<% end %>

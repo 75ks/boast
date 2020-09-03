@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :destroy, :edit, :update]
+  before_action :set_user, only: [:show, :destroy]
 
   def show
+    @user_posts = @user.posts.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def destroy
@@ -12,6 +13,10 @@ class UsersController < ApplicationController
       flash.now[:alert] = "削除に失敗しました"
       render :show
     end
+  end
+
+  def likes
+    @user_posts = current_user.favorite_posts.order("created_at DESC").page(params[:page]).per(5)
   end
 
   private

@@ -1,41 +1,51 @@
 <%= render "shared/header"%>
 
-<div class="user-container">
-  <div class="user-info">
-    <h2 class="info-name">@<%= @user.nickname %></h2>
-    <h2 class="info-gender"><%=  @user.gender.name %></h2>
-  </div>
-  <% if user_signed_in? && current_user.id == @user.id %>
-    <div class="btn-container">
-      <%= link_to edit_user_registration_path do %>
-        <div class="edit-btn btn user-edit-btn">
-          <span class="edit-btn-text btn-text">ユーザー編集</span>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-  
-</div>
-
 <div class="main">
+  <div class="genre-container">
+    <ul class="genre-lists">
+     <li>
+      <%= link_to "自分の投稿", user_path(current_user.id), class:"genre" %>
+     </li>
+     <li>
+      <%= link_to "いいねした投稿", likes_users_path, class:"genre" %>
+     </li>
+    </ul>
+  </div>
+
+  <div class="user-container">
+    <div class="user-info">
+      <h2 class="info-name">@<%= @user.nickname %></h2>
+      <h2 class="info-gender"><%=  @user.gender.name %></h2>
+    </div>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <div class="btn-container">
+        <%= link_to edit_user_registration_path do %>
+          <div class="edit-btn btn user-edit-btn">
+            <span class="edit-btn-text btn-text">ユーザー編集</span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="post-contents">
     <ul class="post-lists">
-      <% @user.posts.each do |post| %>
+      <% @user_posts.each do |post| %>
         <li class="list">
           <%= link_to post_path(post.id) do %>
             <% post.images.each do |image| %>
               <%= image_tag image, class:"post-image" %>
             <% end %>
           <% end %>
-          <div class="heart-btn">
-            <%= image_tag "heart.png", class:"heart-icon" %>
-            <span class="heart-count">0</span>
+          <div class="heart-btn" id="favorites_buttons_<%= post.id %>">
+            <%= render partial: "shared/like", locals: {post: post} %>
           </div>
           <p class="post-text">
             <%= post.text %>
           </p>
         </li>
       <% end %>
+      <%= paginate @user_posts %>
     </ul>
   </div>
 </div>
