@@ -7,7 +7,7 @@ a {
   width: 100%;
 }
 
-.gender-container {
+.genre-container {
   width: 100%;
   height: 50px;
   background-color: lightgray;
@@ -16,18 +16,18 @@ a {
   
 }
 
-.gender-lists {
+.genre-lists {
   height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.gender {
+.genre {
   font-weight: bold;
 }
 
-.gender:hover {
+.genre:hover {
   border-bottom: black 2px solid;
 }
 

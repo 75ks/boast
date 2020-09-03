@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
-  before_action :set_post, only: [:show, :create, :destroy]
+  before_action :set_post, only: [:index, :create, :destroy]
 
-  def show
+  def index
 
   end
 
