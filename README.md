@@ -11,9 +11,10 @@
 
 ### Association
 
-- has_many               :posts
-- has_many               :comments
-- has_many               :favorites
+- has_many               :posts, dependent: :destroy
+- has_many               :comments, dependent: :destroy
+- has_many               :favorites, dependent: :destroy
+- has_many               :favorite_posts, through: :favorites, source: :post
 - belongs_to_active_hash :gender
 
 ## posts テーブル
@@ -25,8 +26,8 @@
 
 ### Association
 
-- has_many          :comments
-- has_many          :favorites
+- has_many          :comments, dependent: :destroy
+- has_many          :favorites, dependent: :destroy
 - belongs_to        :user
 - has_many_attached :images
 
