@@ -34,6 +34,14 @@
           <p class="post-text">
             <%= post.text %>
           </p>
+          <ul class="favorite_lists">
+            <p>＜いいねしたユーザー＞</p>
+            <% post.favorites.each do |favorite|%>
+              <li class="favorite_list">
+                <%= favorite.user.nickname %>
+              </li>
+            <% end %>
+          </ul>
         </li>
       <% end %>
       <%= paginate @posts %>

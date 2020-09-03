@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       get :search
     end
   end
-  resources :users, only: [:index, :show, :destroy] do
+  resources :users, only: [:show, :destroy] do
     collection do
       get :likes
     end
