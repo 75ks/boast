@@ -38,7 +38,9 @@
                 <%= image_tag "heart.png", class:"heart-icon" %>
               <% end %>
             <% end %>
-            <span class="heart-count">0</span>
+            <span class="heart-count">
+              <%= Favorite.where(post_id: post.id).count %>
+            </span>
           </div>
           <p class="post-text">
             <%= post.text %>
