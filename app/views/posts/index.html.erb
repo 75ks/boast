@@ -29,7 +29,15 @@
             <% end %>
           <% end %>
           <div class="heart-btn">
-            <%= image_tag "heart.png", class:"heart-icon" %>
+            <% unless Favorite.find_by(user_id: current_user.id, post_id: post.id) %>
+              <%= link_to post_favorites_path(post.id), method: :post do %>
+                <%= image_tag "heart.png", class:"heart-icon" %>
+              <% end %>
+            <% else %>
+              <%= link_to post_favorite_path(post.id, current_user.id), method: :delete do %>
+                <%= image_tag "heart.png", class:"heart-icon" %>
+              <% end %>
+            <% end %>
             <span class="heart-count">0</span>
           </div>
           <p class="post-text">
