@@ -28,19 +28,8 @@
               <%= image_tag image, class:"post-image" %>
             <% end %>
           <% end %>
-          <div class="heart-btn">
-            <% unless Favorite.find_by(user_id: current_user.id, post_id: post.id) %>
-              <%= link_to post_favorites_path(post.id), method: :post do %>
-                <i class="far fa-heart like-btn"></i>
-              <% end %>
-            <% else %>
-              <%= link_to post_favorite_path(post.id, current_user.id), method: :delete do %>
-                <i class="fas fa-heart unlike-btn"></i>
-              <% end %>
-            <% end %>
-            <span class="heart-count">
-              <%= Favorite.where(post_id: post.id).count %>
-            </span>
+          <div class="heart-btn" id="favorites_buttons_<%= post.id %>">  
+            <%= render partial: "shared/like", locals: {post: post} %>
           </div>
           <p class="post-text">
             <%= post.text %>

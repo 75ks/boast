@@ -28,7 +28,7 @@
               <%= image_tag image, class:"post-image" %>
             <% end %>
           <% end %>
-          <div class="heart-btn" id="favorites_buttons_<%= post.id %>">  
+          <div class="heart-btn" id="favorites_buttons_<%= post.id %>">
             <%= render partial: "shared/like", locals: {post: post} %>
           </div>
           <p class="post-text">
