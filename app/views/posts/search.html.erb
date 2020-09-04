@@ -34,6 +34,9 @@
           <p class="post-text">
             <%= post.text %>
           </p>
+          <ul class="favorite_lists" id="favorites_user_<%= post.id %>">
+            <%= render partial: "shared/favorite_user", locals: {post: post} %>
+          </ul>
         </li>
       <% end %>
       <%= paginate @posts %>

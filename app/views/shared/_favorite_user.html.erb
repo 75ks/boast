@@ -1,0 +1,6 @@
+<p>＜いいねしたユーザー＞</p>
+<% post.favorites.each do |favorite|%>
+  <li class="favorite_list">
+    <%= favorite.user.nickname %>
+  </li>
+<% end %>

@@ -34,13 +34,8 @@
           <p class="post-text">
             <%= post.text %>
           </p>
-          <ul class="favorite_lists">
-            <p>＜いいねしたユーザー＞</p>
-            <% post.favorites.each do |favorite|%>
-              <li class="favorite_list">
-                <%= favorite.user.nickname %>
-              </li>
-            <% end %>
+          <ul class="favorite_lists" id="favorites_user_<%= post.id %>">
+            <%= render partial: "shared/favorite_user", locals: {post: post} %>
           </ul>
         </li>
       <% end %>
