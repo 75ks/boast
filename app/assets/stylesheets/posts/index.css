@@ -77,6 +77,11 @@ a {
   margin-top: 12px;
 }
 
+.heart-count {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 .like-btn {
   color: #808080;
   font-size: 20px;
@@ -109,8 +114,8 @@ a {
   border: lightgray 1px solid;
 }
 
-.favorite_list {
-  
+.hidden {
+  display: none;
 }
 
 .btn {

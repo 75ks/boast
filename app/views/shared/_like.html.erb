@@ -7,6 +7,6 @@
     <i class="fas fa-heart unlike-btn"></i>
   <% end %>
 <% end %>
-<span class="heart-count">
+<span class="heart-count" id="heart">
   <%= Favorite.where(post_id: post.id).count %>
 </span>
