@@ -1,10 +1,10 @@
-# App URL
+## App URL
 http://18.176.181.238/
 
 
-# テーブル設計
+## テーブル設計
 
-## users テーブル
+### users テーブル
 
 | Column       | Type    | Options     |
 | ------------ | ------- | ----------- |
@@ -13,7 +13,7 @@ http://18.176.181.238/
 | nickname     | string  | null: false |
 | gender_id    | integer | null: false |
 
-### Association
+#### Association
 
 - has_many               :posts, dependent: :destroy
 - has_many               :comments, dependent: :destroy
@@ -21,21 +21,21 @@ http://18.176.181.238/
 - has_many               :favorite_posts, through: :favorites, source: :post
 - belongs_to_active_hash :gender
 
-## posts テーブル
+### posts テーブル
 
 | Column | Type          | Options                        |
 | ------ | ------------- | ------------------------------ |
 | text   | text          | null: false                    |
 | user   | references    | null: false, foreign_key: true |
 
-### Association
+#### Association
 
 - has_many          :comments, dependent: :destroy
 - has_many          :favorites, dependent: :destroy
 - belongs_to        :user
 - has_many_attached :images
 
-## comments テーブル
+### comments テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -43,19 +43,19 @@ http://18.176.181.238/
 | user   | references | null: false, foreign_key: true |
 | post   | references | null: false, foreign_key: true |
 
-### Association
+#### Association
 
 - belongs_to :user
 - belongs_to :post
 
-## favorites テーブル
+### favorites テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
 | post   | references | null: false, foreign_key: true |
 
-### Association
+#### Association
 
 - belongs_to :user
 - belongs_to :post
