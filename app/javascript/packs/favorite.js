@@ -1,15 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
+//   const hearts = document.querySelectorAll(".heart-count"); 
+//   hearts.forEach(function(heart) {
 
-  const postId = document.getElementById("list").getAttribute("data-id");
-  const heart = document.getElementById("heart")
-  const favoriteUserId = document.getElementById(`favorites_user_${postId}`)
+//     heart.addEventListener("click", function() {
+//       const postId = this.getAttribute("data-id");
+//       const favoriteUser = document.getElementById(`favorites_user_${postId}`)
+//       console.log(favoriteUser);
 
-  heart.addEventListener("click", function() {
-    if (favoriteUserId.getAttribute("style") == "display:block;") {
-      favoriteUserId.removeAttribute("style", "display:block;")
-    } else {
-      favoriteUserId.setAttribute("style", "display:block;")
-    }
+//       if (favoriteUser.getAttribute("style") == "display:block;") {
+//         favoriteUser.removeAttribute("style", "display:block;")
+//       } else {
+//         favoriteUser.setAttribute("style", "display:block;")
+//       }
+//     });
+//   });
+// });
+
+function check() {
+  const hearts = document.querySelectorAll(".heart-count"); 
+  hearts.forEach(function(heart) {
+    
+    heart.addEventListener("click", function() {
+      const postId = this.getAttribute("data-id");
+      const favoriteUser = document.getElementById(`favorites_user_${postId}`)
+      console.log(favoriteUser);
+      
+      if (favoriteUser.getAttribute("style") == "display:block;") {
+        favoriteUser.removeAttribute("style", "display:block;")
+      } else {
+        favoriteUser.setAttribute("style", "display:block;")
+      }
+    });
   });
-  
-});
+}
+setInterval(check, 1000);

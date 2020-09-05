@@ -17,7 +17,7 @@
   <div class="post-contents">
     <ul class="post-lists">
       <% @posts.each do |post| %>
-        <li class="list" id="list" data-id=<%= post.id %>>
+        <li class="list">
           <span>
             <%= link_to user_path(post.user.id) do %>
               @<%= post.user.nickname %>
