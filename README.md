@@ -28,13 +28,15 @@ AWS(EC2)
 ## 使用技術
 - ruby 2.6.5
 - rails 6.0.0
+- jquery 3.3.1
 - capistrano 3.14.1
 - Web Server Nginx
 - Application Server Unicorn
 - Amazon S3
 
 ## 課題や今後実装したい機能
-
+開発していて、検索機能が性別のみなので、アイテムカテゴリー、ブランドのタグを追加して詳細な検索ができるように実装できたらもっと使いやすくなると思いました。
+今後、実装していこうと思います。
 
 ## DB設計
 
