@@ -1,7 +1,7 @@
 # Boast
 
 ## App URL
-[link](http://18.176.181.238/){:target="_blank"}
+<a href="http://18.176.181.238/" target="_blank">Boast</a>
 
 ## 概要
 - ユーザー登録、編集、削除
