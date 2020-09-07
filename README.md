@@ -12,13 +12,13 @@
 - 投稿を性別で分けて確認
 
 ## テスト用アカウント
-①
-- メールアドレス test@test1
-- パスワード testtest1
+①  
+メールアドレス test@test1  
+パスワード testtest1  
 
-②
-- メールアドレス test@test2
-- パスワード testtest2
+②  
+メールアドレス test@test2  
+パスワード testtest2  
 
 ## 利用方法
 - 新規登録(登録済の方はログイン)をする
