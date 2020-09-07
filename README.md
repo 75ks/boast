@@ -58,9 +58,25 @@
 
 ## 実装した機能についてのGIFと説明
 <h3 align="center">- ログイン -</h3>
-![ログイン](ae355e011449f062706bb6bd03c19e32.gif)
-
-
+<p align="center">
+  <img src="ae355e011449f062706bb6bd03c19e32.gif" width=70%>
+</p>
+<h3 align="center">- 投稿 -</h3>
+<p align="center">
+  <img src="f006062475d03ebea9cc2fd675403b4a.gif" width=70%>
+</p>
+<h3 align="center">- コメント -</h3>
+<p align="center">
+  <img src="d371a72fbb1f4fe47689da287f3ec991.gif" width=70%>
+</p>
+<h3 align="center">- いいね -</h3>
+<p align="center">
+  <img src="2275db1753ea1b0e818d0a5bb36d0b9d.gif" width=70%>
+</p>
+<h3 align="center">- 性別分け投稿表示 -</h3>
+<p align="center">
+  <img src="c32797709fca9f94a0b88268d85936ba.gif" width=70%>
+</p>
 
 ## 工夫したポイント
 性別で分けて投稿を表示させる機能を実装したところ。 <br>
