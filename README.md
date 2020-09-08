@@ -77,6 +77,10 @@
 <p align="center">
   <img src="c32797709fca9f94a0b88268d85936ba.gif" width=70%>
 </p>
+<h3 align="center">- ページネーション機能 -</h3>
+<p align="center">
+  <img src="3bae8094e4ea06e0764c234c853377f6.gif" width=70%>
+</p>
 
 ## 工夫したポイント
 性別で分けて投稿を表示させる機能を実装したところ。 <br>
