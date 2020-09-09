@@ -62,7 +62,7 @@
       <% end %>
     </div>
     <div class="row">
-      <%= form_with(model: [@post, @comment], url: post_comments_path(@post.id), local: true) do |f| %>
+      <%= form_with(model: [@post, @comment], url: post_comments_path(@post.id), class:"viewport", local: true) do |f| %>
         <%= render "shared/error_messages", model: f.object %>
         <%= f.text_area :text, class:"comment-new-text", placeholder:"コメントを書く" %>
         <div class="btn-center"><%= f.submit "コメントする", class:"post-btn btn" %></div>

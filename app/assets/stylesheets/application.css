@@ -28,3 +28,42 @@
    color: white;
    text-align: center;
  }
+
+ @media (max-width: 599px) {
+  .genre-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .post-lists {
+    width: 100%;
+  }
+
+  .new-post-btn {
+    width: 55px;
+  }
+
+  .post-new-text {
+    width: 100%;
+  }
+
+  .post-show {
+    width: 90%;
+  }
+
+  .comment-new-text {
+    width: 100%;
+  }
+  
+  .comments-container {
+    width: 100%;
+  }
+
+  .comment-container {
+    width: 100%;
+  }
+
+  .viewport {
+    width: 100%;
+  }
+}
