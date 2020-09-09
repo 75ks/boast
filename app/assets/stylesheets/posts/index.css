@@ -159,7 +159,6 @@ a {
 
 .pagination {
   border: lightgray 1px solid;
-  padding: 3px;
 }
 
 .pagination > span > a {
@@ -173,8 +172,6 @@ a {
 
 .page, .next, .last, .first, .prev {
   display: inline-block;
-  font-size: 15px;
-  margin: -3px;
 }
 
 .page:hover, .next:hover, .last:hover, .first:hover, .prev:hover {
