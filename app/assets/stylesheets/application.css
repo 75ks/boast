@@ -41,6 +41,7 @@
 
   .new-post-btn {
     width: 55px;
+    z-index: 2;
   }
 
   .post-new-text {
@@ -67,6 +68,10 @@
 
   .comment-container {
     width: 100%;
+  }
+
+  .comment-time {
+    font-size: 12px;
   }
 
   .viewport {
