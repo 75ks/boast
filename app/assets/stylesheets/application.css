@@ -51,6 +51,12 @@
     width: 90%;
   }
 
+  .post-image {
+    height: 66vh;
+    width: 66vw;
+    min-height: 200px;
+  }
+
   .comment-new-text {
     width: 100%;
   }
