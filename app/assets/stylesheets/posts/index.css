@@ -64,6 +64,10 @@ a {
   margin-top: 12px;
 }
 
+.swiper-container {
+  padding-bottom: 30px;
+}
+
 .post-image {
   margin-top: 12px;
   height: 33vh;
@@ -151,4 +155,38 @@ a {
 
 .new-post-btn-text {
   color: black;
+}
+
+.pagination {
+  border: lightgray 1px solid;
+  padding: 3px;
+}
+
+.pagination > span > a {
+  color: #007bff;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.page, .next, .last, .first, .prev {
+  display: inline-block;
+  font-size: 15px;
+  margin: -3px;
+}
+
+.page:hover, .next:hover, .last:hover, .first:hover, .prev:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.current {
+  background-color: #007bff !important;
+  color: white !important;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }

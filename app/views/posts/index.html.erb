@@ -23,11 +23,20 @@
               @<%= post.user.nickname %>
             <% end %>
           </span>
-          <%= link_to post_path(post.id) do %>
-            <% post.images.each do |image| %>
-              <%= image_tag image, class:"post-image" %>
-            <% end %>
-          <% end %>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <% post.images.each do |image| %>
+                <div class="swiper-slide">
+                  <%= link_to post_path(post.id) do %>
+                    <%= image_tag image, class:"post-image" %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            <div class="swiper-button-prev swiper-button-black"></div>
+            <div class="swiper-button-next swiper-button-black"></div>
+            <div class="swiper-pagination"></div>
+          </div>
           <div class="heart-btn" id="favorites_buttons_<%= post.id %>">
             <%= render partial: "shared/like", locals: {post: post} %>
           </div>
