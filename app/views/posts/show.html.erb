@@ -44,8 +44,17 @@
             <div class="comment-container">
               <span>@<%= link_to comment.user.nickname, user_path(comment.user.id) %>:</span>
               <%= comment.text %><br>
-              <div class="comment-time">
-                <%= l comment.created_at, format: :short %>
+              <div class="comment-sub-container">
+                <div class="comment-time">
+                  <%= l comment.created_at, format: :short %>
+                </div>
+                <div class="comment-delete">
+                  <% if user_signed_in? && current_user.id == comment.post.user.id %>
+                    <%= link_to post_comment_path(comment.post.id, comment.id), method: :delete do %>
+                      <i class="far fa-trash-alt"></i>
+                    <% end %>
+                  <% end %>
+                </div>
               </div>
             </div>
           <% end %>

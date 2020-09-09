@@ -91,11 +91,20 @@
   margin-bottom: 10px;
 }
 
+.comment-sub-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .comment-time {
   color: darkgray;
   font-size: 4px;
 }
 
+.comment-delete {
+  color: darkgray;
+}
 
 .comment-new-text {
   height: 100px;
