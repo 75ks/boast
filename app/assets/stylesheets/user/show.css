@@ -23,6 +23,36 @@
   font-size: 18px;
 }
 
+.follow-btn {
+  background-color: #3396ff;
+  margin-top: 40px;
+  color: white;
+}
+
+.follow-btn:hover {
+  background-color: #007bff;
+}
+
+.follow-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.anfollow-btn {
+  background-color: #3396ff;
+  margin-top: 40px;
+  color: white;
+}
+
+.anfollow-btn:hover {
+  background-color: #007bff;
+}
+
+.anfollow-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
 .user-edit-btn {
   margin-left: 10px;
   margin-right: 10px;
