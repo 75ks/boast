@@ -1,0 +1,30 @@
+<%= render "shared/header"%>
+
+<div class="main">
+  <div class="genre-container">
+    <ul class="genre-lists">
+     <li>
+      <%= link_to "ユーザーの投稿", user_path(params[:id]), class:"genre" %>
+     </li>
+     <li>
+      <%= link_to "いいねした投稿", likes_user_path(params[:id]), class:"genre" %>
+     </li>
+     <li>
+      <%= link_to "フォロー中のユーザー", follows_user_path(params[:id]), class:"genre" %>
+     </li>
+    </ul>
+  </div>
+
+  <% @follows.each do |follow| %>
+    <div class="user-info">
+      <h2 class="info-name">@<%= follow.nickname %></h2>
+      <h2 class="info-gender"><%= follow.gender.name %></h2>
+    </div>
+  <% end %>
+
+</div>
+<%= link_to new_post_path do %>
+  <div class="new-post-btn btn">
+    <span class="new-post-btn-text btn-text">投稿</span>
+  </div>
+<% end %> 
