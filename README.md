@@ -137,11 +137,15 @@ AWS(EC2)
 
 #### Association
 
+- belongs_to_active_hash :gender
 - has_many               :posts, dependent: :destroy
 - has_many               :comments, dependent: :destroy
 - has_many               :favorites, dependent: :destroy
 - has_many               :favorite_posts, through: :favorites, source: :post
-- belongs_to_active_hash :gender
+- has_many               :relationships
+- has_many               :followings, through: :relationships, source: :follow
+- has_many               :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
+- has_many               :followers, through: :reverse_of_relationships, source: :user
 
 ### posts テーブル
 
@@ -181,3 +185,15 @@ AWS(EC2)
 
 - belongs_to :user
 - belongs_to :post
+
+### relationships テーブル
+
+| Column | Type       | Options                           |
+| ------ | ---------- | --------------------------------- |
+| user   | references | foreign_key: true                 |
+| follow | references | foreign_key: { to_table: :users } |
+
+#### Association
+
+- belongs_to :user
+- belongs_to :follow, class_name: 'User'
