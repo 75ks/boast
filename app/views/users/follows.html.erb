@@ -17,10 +17,17 @@
 
   <% @follows.each do |follow| %>
     <div class="user-info">
-      <h2 class="info-name">@<%= follow.nickname %></h2>
-      <h2 class="info-gender"><%= follow.gender.name %></h2>
+      <%= link_to user_path(follow.id) do %>
+        <h2 class="info-name">
+          @<%= follow.nickname %>
+        </h2>
+      <% end %>
+      <h2 class="info-gender">
+        <%= follow.gender.name %>
+      </h2>
     </div>
   <% end %>
+  <%= paginate @follows %>
 
 </div>
 <%= link_to new_post_path do %>
