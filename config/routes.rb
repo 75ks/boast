@@ -15,4 +15,5 @@ Rails.application.routes.draw do
       get :likes
     end
   end
+  resources :relationships, only: [:create, :destroy]
 end
