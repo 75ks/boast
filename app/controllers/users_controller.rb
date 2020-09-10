@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :destroy]
+  before_action :set_user
 
   def show
     @user_posts = @user.posts.order("created_at DESC").page(params[:page]).per(5)
@@ -16,7 +16,11 @@ class UsersController < ApplicationController
   end
 
   def likes
-    @user_posts = current_user.favorite_posts.order("created_at DESC").page(params[:page]).per(5)
+    @user_posts = @user.favorite_posts.order("created_at DESC").page(params[:page]).per(5)
+  end
+
+  def follows
+    @follows = @user.followings.page(params[:page]).per(10)
   end
 
   private
