@@ -16,6 +16,7 @@
   </div>
 
   <div class="user-container">
+    <div class="page-name"><いいねした投稿></div>
     <div class="user-info">
       <h2 class="info-name">@<%= @user.nickname %></h2>
       <h2 class="info-gender"><%= @user.gender.name %></h2>
@@ -50,6 +51,11 @@
     <ul class="post-lists">
       <% @user_posts.each do |post| %>
         <li class="list">
+          <span>
+            <%= link_to user_path(post.user.id) do %>
+              @<%= post.user.nickname %>
+            <% end %>
+          </span>
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <% post.images.each do |image| %>

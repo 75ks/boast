@@ -23,6 +23,12 @@ a {
   align-items: center;
 }
 
+.page-name {
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
 .genre {
   font-weight: bold;
 }
