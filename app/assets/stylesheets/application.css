@@ -17,6 +17,16 @@
   box-sizing: border-box;
  }
 
+ body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    'メイリオ',
+    'Meiryo'
+    sans-serif;
+}
+
  .notice {
    background-color: #51ff51;
    color: white;
@@ -33,6 +43,10 @@
   .genre-container {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .genre {
+    font-size: 13px;
   }
 
   .post-lists {
@@ -76,5 +90,9 @@
 
   .viewport {
     width: 100%;
+  }
+
+  .form-size {
+    width: 90%;
   }
 }
