@@ -95,6 +95,11 @@
 <p align="center">
   <img src="1f53d92e6d171e0e3e2c7c6bd19b1edb.gif" width=70%>
 </p>
+<h3 align="center">- フォロー機能 -</h3>
+<p align="center">ユーザーページから「フォロー」を押すとユーザーをフォローし、「アンフォロー」に表示が変わる。「アンフォロー」を押すとユーザーのフォローを解除でき、「フォロー」に表示が変わる。</p>
+<p align="center">
+  <img src="75e24abd243e9086d4e1c70bfd3cdad3.gif" width=70%>
+</p>
 
 ## 工夫したポイント
 性別で分けて投稿を表示させる機能を実装したところ。 <br>
