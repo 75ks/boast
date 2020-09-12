@@ -21,7 +21,7 @@
 
   <div class="page-name"><フォロー中のユーザー></div>
   <% @follows.each do |follow| %>
-    <div class="user-info">
+    <div class="user-info user-info-list">
       <%= link_to user_path(follow.id) do %>
         <h2 class="info-name">
           @<%= follow.nickname %>
