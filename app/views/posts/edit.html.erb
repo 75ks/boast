@@ -1,23 +1,25 @@
-<%= render "shared/header"%>
+<div class="wrapper">
+  <%= render "shared/header"%>
 
-<div class="contents">
-  <div class="container row">
-    <%= form_with model: @post, local: true do |f| %>
+  <div class="contents">
+    <div class="container row">
+      <%= form_with model: @post, class:"form-size", local: true do |f| %>
 
-      <h3 class="new-content">投稿情報を入力してください</h3>
+        <h3 class="new-content">投稿情報を入力してください</h3>
 
-      <%= render "shared/error_messages", model: f.object %>
+        <%= render "shared/error_messages", model: f.object %>
 
-      <p class="image-content">クリックして画像を選択</p>
-      <%= f.file_field :images, name:"post[images][]", class:"post-new-image" %><br>
-      <div id="image-list">
-        <% @post.images.each do |image| %>
-          <%= image_tag image, class:"post-image" %>
-        <% end %>
-      </div>
-      <%= f.text_area :text, class:"post-new-text", placeholder:"テキストを書く", rows:"10" %>
-      <div class="btn-center"><%= f.submit "更新する", class:"post-btn btn" %></div>
-      
-    <% end %>
+        <p class="image-content">クリックして画像を選択</p>
+        <%= f.file_field :images, name:"post[images][]", class:"post-new-image" %><br>
+        <div id="image-list">
+          <% @post.images.each do |image| %>
+            <%= image_tag image, class:"post-image image-size" %>
+          <% end %>
+        </div>
+        <div class="btn-center"><%= f.text_area :text, class:"post-new-text", placeholder:"テキストを書く", rows:"10" %></div>
+        <div class="btn-center"><%= f.submit "更新する", class:"post-btn btn" %></div>
+        
+      <% end %>
+    </div>
   </div>
 </div>
