@@ -125,11 +125,22 @@ a {
 .btn {
   width: 150px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 10px;
   border: black 1px solid;
-  box-shadow: 2px 2px 2px;
+}
 
+.round-btn {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 10px;
+  border: black 1px solid;
+  font-size: 30px;
 }
 
 .new-post-btn {

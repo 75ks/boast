@@ -47,9 +47,16 @@
     width: 100%;
   }
 
-  .new-post-btn {
+  .round-btn {
     width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+
+  .new-post-btn {
     z-index: 2;
+    bottom: 18px;
+    right: 18px;  
   }
 
   .post-new-text {
