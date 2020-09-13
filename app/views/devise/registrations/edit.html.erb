@@ -34,7 +34,7 @@
           <%= f.password_field :password_confirmation, class:"user-field", placeholder:"同じパスワードを入力して下さい" %>
         </div>
         <div class="btn-center">
-          <%= f.submit "更新する", class:"user-btn btn" %>
+          <%= f.submit "保存する", class:"user-btn btn" %>
         </div>
 
         <% if user_signed_in? && current_user.id == @user.id %>
