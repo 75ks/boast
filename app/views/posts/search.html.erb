@@ -7,10 +7,18 @@
       <%= link_to "ALL", root_path, class:"genre" %>
      </li>
      <li>
-      <%= link_to "MEN", search_posts_path(gender_id: 2), class:"genre" %>
+      <% if current_page?("/posts/search?gender_id=2") %>
+        <%= link_to "MEN", search_posts_path(gender_id: 2), class:"genre", style:"border-bottom:2px black solid;" %>
+      <% else %>
+        <%= link_to "MEN", search_posts_path(gender_id: 2), class:"genre" %>
+      <% end%>
      </li>
      <li>
-      <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"genre" %>
+      <% if current_page?("/posts/search?gender_id=3") %>
+        <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"genre", style:"border-bottom:2px black solid;" %>
+      <% else %>  
+        <%= link_to "WOMEN", search_posts_path(gender_id: 3), class:"genre" %>
+      <% end%>
      </li>
     </ul>
   </div>

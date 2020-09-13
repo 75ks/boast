@@ -7,7 +7,7 @@
       <%= link_to "ユーザーの投稿", user_path(params[:id]), class:"genre" %>
      </li>
      <li>
-      <%= link_to "いいねした投稿", likes_user_path(params[:id]), class:"genre" %>
+      <%= link_to "いいねした投稿", likes_user_path(params[:id]), class:"genre", style:"border-bottom:2px black solid;" %>
      </li>
      <li>
       <%= link_to "フォロー中のユーザー", follows_user_path(params[:id]), class:"genre" %>
