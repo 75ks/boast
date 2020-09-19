@@ -3,6 +3,12 @@
 ## App URL
 <a href="http://18.176.181.238/" target="_blank">Boast</a>
 
+## Twitter URL
+<a href="https://twitter.com/Kenta65791378" target="_blank">Twitter</a>
+
+## Qiita URL
+<a href="https://qiita.com/75ks" target="_blank">Qiita</a>
+
 ## 概要
 - ユーザー登録、編集、削除、ログイン
 - テキスト、画像の投稿、編集、削除
