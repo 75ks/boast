@@ -121,6 +121,7 @@
 ## 使用技術
 - ruby 2.6.5
 - rails 6.0.0
+- rspec-rails 4.0.1
 - jquery 3.3.1
 - capistrano 3.14.1
 - Web Server Nginx
