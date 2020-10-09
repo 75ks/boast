@@ -126,13 +126,17 @@ RSpecを使ったモデルの正常系、異常系の単体テストコード。
 - rails 6.0.0
 - rspec-rails 4.0.1
 - jquery 3.3.1
-- capistrano 3.14.1
-- Web Server Nginx
-- Application Server Unicorn
 - Amazon S3
+- MySQL 5.6.47
 
 ## 本番環境
-AWS(EC2)
+- AWS(EC2)
+- Amazon Linux AMI 2
+- Node.js
+- MariaDB
+- Application Server Unicorn 5.4.1
+- Web Server Nginx
+- capistrano 3.14.1
 
 ## ローカルでの動作方法
 `$ git clone https://github.com/75ks/boast.git` <br>
